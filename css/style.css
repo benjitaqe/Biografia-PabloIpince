@@ -4,6 +4,19 @@
     --light-color: #f8f9fa;
     --dark-color: #212529;
 }
+.banner-con-overlay {
+  width: 100%; 
+  min-height: 750px !important;
+  background-image: 
+    linear-gradient(rgba(30, 50, 100, 0.6), rgba(30, 50, 100, 0.6)),
+    url('../img/banner-conferencia.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  color: white; 
+}
+.img-section{
+    border-radius: 100%;
+}
 
 .navbar-dark.bg-primary {
     background-color: var(--primary-color) !important;
