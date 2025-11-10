@@ -4,17 +4,20 @@
     --light-color: #f8f9fa;
     --dark-color: #212529;
 }
-.banner-con-overlay {
-  width: 100%; 
-  min-height: 450px; 
-  height: 450px; 
-  background-image: 
-    linear-gradient(rgba(30, 50, 100, 0.3), rgba(30, 50, 100, 0.3)),
-    url('../img/banner-conferencia.jpeg');
-  background-size: cover;
-  background-position: center;
-  color: white; 
+
+.hero-section.banner-con-overlay {
+    height: 450px !important; 
+    min-height: 450px !important; 
+    background-color: transparent !important; 
+    width: 100%;
+    background-image: 
+        linear-gradient(rgba(30, 50, 100, 0.3), rgba(30, 50, 100, 0.3)),
+        url('../img/banner-conferencia.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: white; 
 }
+
 .img-section{
     border-radius: 100%;
 }
@@ -30,7 +33,6 @@
 }
 
 .hero-section {
-    background-color: transparent; 
     min-height: auto; 
     height: 100%; 
     padding-top: 56px; 
@@ -60,7 +62,6 @@ section {
 footer.bg-dark {
     background-color: var(--dark-color) !important;
 }
-
 
 .card-title.text-primary {
     color: var(--primary-color) !important;
