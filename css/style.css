@@ -59,7 +59,6 @@ footer.bg-dark {
     background-color: var(--dark-color) !important;
 }
 
-
 .social-icons-header a {
     color: white; 
     transition: color 0.3s ease;
