@@ -59,11 +59,29 @@ footer.bg-dark {
     background-color: var(--dark-color) !important;
 }
 
+
 .social-icons-header a {
     color: white; 
     transition: color 0.3s ease;
 }
 
 .social-icons-header a:hover {
-    color: var(--secondary-color);
+    color: var(--secondary-color); 
+}
+
+.card-title.text-primary {
+    color: var(--primary-color) !important;
+}
+
+.card-title.text-warning i {
+    color: var(--secondary-color) !important;
+}
+
+.card.border-primary {
+    border-color: var(--primary-color) !important;
+    border-width: 3px !important; 
+}
+.card.border-warning {
+    border-color: var(--secondary-color) !important;
+    border-width: 3px !important; 
 }
