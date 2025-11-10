@@ -6,7 +6,8 @@
 }
 .banner-con-overlay {
   width: 100%; 
-  min-height: 450px !important;
+  min-height: 450px; 
+  height: 450px; 
   background-image: 
     linear-gradient(rgba(30, 50, 100, 0.6), rgba(30, 50, 100, 0.6)),
     url('../img/banner-conferencia.jpeg');
@@ -30,7 +31,8 @@
 
 .hero-section {
     background-color: var(--primary-color);
-    min-height: auto;
+    min-height: auto; 
+    height: 100%; 
     padding-top: 56px; 
 }
 
@@ -59,13 +61,14 @@ footer.bg-dark {
     background-color: var(--dark-color) !important;
 }
 
+
 .social-icons-header a {
     color: white; 
     transition: color 0.3s ease;
 }
 
 .social-icons-header a:hover {
-    color: var(--secondary-color); 
+    color: var(--secondary-color);
 }
 
 .card-title.text-primary {
