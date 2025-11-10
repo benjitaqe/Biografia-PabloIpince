@@ -6,7 +6,7 @@
 }
 .banner-con-overlay {
   width: 100%; 
-  min-height: 750px !important;
+  min-height: 450px !important;
   background-image: 
     linear-gradient(rgba(30, 50, 100, 0.6), rgba(30, 50, 100, 0.6)),
     url('../img/banner-conferencia.jpeg');
@@ -30,7 +30,7 @@
 
 .hero-section {
     background-color: var(--primary-color);
-    min-height: 100vh;
+    min-height: auto;
     padding-top: 56px; 
 }
 
