@@ -1,27 +1,42 @@
 :root {
-    --primary-color: #191970; 
-    --secondary-color: #E68A00; 
+    --primary-color: #191970;
+    --secondary-color: #E68A00;
     --light-color: #f8f9fa;
     --dark-color: #212529;
 }
 
+/* --- AJUSTES PARA REDUCIR LA ALTURA DEL NAVBAR --- */
+
+/* 1. Reduce el padding del navbar para hacerlo más delgado */
+.navbar {
+    padding-top: 5px; /* Valor más pequeño */
+    padding-bottom: 5px; /* Valor más pequeño */
+}
+
+/* 2. Reduce el tamaño máximo del logo (imagen dentro de .navbar-brand) */
+.navbar-brand img {
+    max-width: 80px; /* Reducción de 150px a 80px (ajusta si es necesario) */
+    height: auto;
+}
+
+/* --- FIN DE AJUSTES DEL NAVBAR --- */
+
 .hero-section.banner-con-overlay {
-    height: 350px !important; 
-    min-height: 350px !important; 
-    background-color: transparent !important; 
+    height: 350px !important;
+    min-height: 350px !important;
+    background-color: transparent !important;
     width: 100%;
-    background-image: 
+    background-image:
         linear-gradient(rgba(30, 50, 100, 0.3), rgba(30, 50, 100, 0.3)),
         url('../img/banner-conferencia.jpeg');
     background-size: cover;
     background-position: center;
-    color: white; 
+    color: white;
 }
 
 .img-section{
     border-radius: 100%;
 }
-
 
 .navbar-brand {
     font-weight: bold;
@@ -30,13 +45,14 @@
 }
 
 .hero-section {
-    min-height: auto; 
-    height: 100%; 
-    padding-top: 56px; 
+    min-height: auto;
+    height: 100%;
+    padding-top: 56px;
 }
 
+/* Nota: Se mantiene esta regla, pero la de .navbar-brand img es más específica para el logo. */
 .hero-section img {
-    max-width: 150px; 
+    max-width: 150px;
     height: auto;
 }
 
@@ -48,7 +64,7 @@
 }
 
 .btn-warning:hover {
-    background-color: #CC7A00; 
+    background-color: #CC7A00;
     border-color: #CC7A00;
 }
 
@@ -70,9 +86,9 @@ footer.bg-dark {
 
 .card.border-primary {
     border-color: var(--primary-color) !important;
-    border-width: 3px !important; 
+    border-width: 3px !important;
 }
 .card.border-warning {
     border-color: var(--secondary-color) !important;
-    border-width: 3px !important; 
+    border-width: 3px !important;
 }
