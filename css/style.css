@@ -5,21 +5,16 @@
     --dark-color: #212529;
 }
 
-/* --- AJUSTES PARA REDUCIR LA ALTURA DEL NAVBAR --- */
 
-/* 1. Reduce el padding del navbar para hacerlo más delgado */
 .navbar {
-    padding-top: 5px; /* Valor más pequeño */
-    padding-bottom: 5px; /* Valor más pequeño */
+    padding-top: 5px; 
+    padding-bottom: 5px; 
 }
-
-/* 2. Reduce el tamaño máximo del logo (imagen dentro de .navbar-brand) */
 .navbar-brand img {
-    max-width: 80px; /* Reducción de 150px a 80px (ajusta si es necesario) */
+    max-width: 80px;
     height: auto;
 }
 
-/* --- FIN DE AJUSTES DEL NAVBAR --- */
 
 .hero-section.banner-con-overlay {
     height: 350px !important;
@@ -50,7 +45,6 @@
     padding-top: 56px;
 }
 
-/* Nota: Se mantiene esta regla, pero la de .navbar-brand img es más específica para el logo. */
 .hero-section img {
     max-width: 150px;
     height: auto;
