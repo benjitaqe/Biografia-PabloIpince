@@ -1,88 +1,155 @@
 :root {
-    --primary-color: #191970;
-    --secondary-color: #E68A00;
+
+    --primary-color: #191970; 
+
+    --secondary-color: #E68A00; 
+
     --light-color: #f8f9fa;
+
     --dark-color: #212529;
+
 }
 
-
-.navbar {
-    padding-top: 5px; 
-    padding-bottom: 5px; 
-}
-.navbar-brand img {
-    max-width: 80px;
-    height: auto;
-}
 
 
 .hero-section.banner-con-overlay {
-    height: 350px !important;
-    min-height: 350px !important;
-    background-color: transparent !important;
+
+    height: 350px !important; 
+
+    min-height: 350px !important; 
+
+    background-color: transparent !important; 
+
     width: 100%;
-    background-image:
+
+    background-image: 
+
         linear-gradient(rgba(30, 50, 100, 0.3), rgba(30, 50, 100, 0.3)),
+
         url('../img/banner-conferencia.jpeg');
+
     background-size: cover;
+
     background-position: center;
-    color: white;
+
+    color: white; 
+
 }
+
+
 
 .img-section{
+
     border-radius: 100%;
+
 }
+
+
+
+
 
 .navbar-brand {
+
     font-weight: bold;
+
     display: flex;
+
     align-items: center;
+
 }
+
+
 
 .hero-section {
-    min-height: auto;
-    height: 100%;
-    padding-top: 56px;
+
+    min-height: auto; 
+
+    height: 100%; 
+
+    padding-top: 56px; 
+
 }
 
+
+
 .hero-section img {
-    max-width: 150px;
+
+    max-width: 150px; 
+
     height: auto;
+
 }
+
+
+
 
 
 .btn-warning {
+
     background-color: var(--secondary-color);
+
     border-color: var(--secondary-color);
+
     color: white;
+
 }
+
+
 
 .btn-warning:hover {
-    background-color: #CC7A00;
+
+    background-color: #CC7A00; 
+
     border-color: #CC7A00;
+
 }
+
+
 
 section {
+
     padding: 60px 0;
+
 }
+
+
 
 footer.bg-dark {
+
     background-color: var(--dark-color) !important;
+
 }
+
+
 
 .card-title.text-primary {
+
     color: var(--primary-color) !important;
+
 }
+
+
 
 .card-title.text-warning i {
+
     color: var(--secondary-color) !important;
+
 }
 
+
+
 .card.border-primary {
+
     border-color: var(--primary-color) !important;
-    border-width: 3px !important;
+
+    border-width: 3px !important; 
+
 }
+
 .card.border-warning {
+
     border-color: var(--secondary-color) !important;
-    border-width: 3px !important;
+
+    border-width: 3px !important; 
+
 }
