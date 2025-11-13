@@ -4,19 +4,17 @@
     --light-color: #f8f9fa;
     --dark-color: #212529;
 }
-
-.hero-section.banner-con-overlay {
-    height: 450px !important; 
-    min-height: 450px !important; 
-    background-color: transparent !important; 
-    width: 100%;
-    background-image: 
-        linear-gradient(rgba(30, 50, 100, 0.3), rgba(30, 50, 100, 0.3)),
-        url('../img/banner-conferencia.jpeg');
-    background-size: cover;
-    background-position: center;
-    color: white; 
+.navbar{
+    height: 8vh;
 }
+
+.navbar-nav{
+  width: 40vw;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 
 .img-section{
     border-radius: 100%;
@@ -30,17 +28,6 @@
     font-weight: bold;
     display: flex;
     align-items: center;
-}
-
-.hero-section {
-    min-height: auto; 
-    height: 100%; 
-    padding-top: 56px; 
-}
-
-.hero-section img {
-    max-width: 150px; 
-    height: auto;
 }
 
 
@@ -61,6 +48,7 @@ section {
 
 footer.bg-dark {
     background-color: var(--dark-color) !important;
+    margin-top: auto !important;
 }
 
 .card-title.text-primary {
@@ -78,4 +66,59 @@ footer.bg-dark {
 .card.border-warning {
     border-color: var(--secondary-color) !important;
     border-width: 3px !important; 
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden; 
+  background: #111; 
+  height: 70vh; 
+
+}
+
+#carouselExampleFade {
+  position: absolute; 
+  z-index: 1; 
+  top: 0; left: 0; right: 0; bottom: 0; 
+}
+
+#carouselExampleFade .carousel-inner,
+#carouselExampleFade .carousel-item {
+  height: 100%; 
+}
+
+#carouselExampleFade .carousel-item img {
+  object-fit: cover; 
+  height: 100%;
+  width: 100%;
+}
+
+.backgourd-azul::before {
+  width: 100vw;
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(rgba(30, 50, 100, 0.826), rgba(30, 50, 100, 0.6));
+  z-index: 4; 
+}
+
+.hero-content {
+  position: absolute; 
+  z-index: 3; 
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10rem; 
+}
+
+.boton-carousel{
+  z-index: 4 !important; 
+}
+footer{
+  height: 100%;
 }

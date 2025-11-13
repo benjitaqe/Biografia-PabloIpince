@@ -1,242 +1,313 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pablo Ipince | Crecemos junto a tu negocio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/jpeg" href="img/4.jpeg"> 
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+       
+    <meta charset="UTF-8">
+       
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pablo Ipince | Crecemos junto a tu negocio</title>
+       
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+       
+    <link rel="stylesheet" href="css/style.css">
+       
+    <link rel="icon" type="image/jpeg" href="img/4.jpeg"> 
+       
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
-<body>
 
-    <div class="modal fade" id="spotifyModal" tabindex="-1" aria-labelledby="spotifyModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="spotifyModalLabel">🎧 ¡Invitación Especial!</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-          </div>
-          <div class="modal-body">
-            Te invitamos a escuchar el capítulo de podcast donde Pablo Ipince fue invitado. ¿Deseas abrir Spotify para escucharlo ahora?
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Más tarde</button>
-            <a href="https://open.spotify.com/episode/5mpJPOD9uzuLZ2Mp2k3pAQ?si=OPzf5bJ-S_eTHxoMYxrKOA&nd=1&dlsi=d327079c6e1649a9" target="_blank" class="btn btn-warning">Abrir Spotify</a> 
-          </div>
+<body class="d-flex flex-column min-vh-100">
+        <div class="modal fade" id="spotifyModal" tabindex="-1" aria-labelledby="spotifyModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="spotifyModalLabel">🎧 ¡Invitación Especial!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+                </div>
+                <div class="modal-body">
+                    Te invitamos a escuchar el capítulo de podcast donde Pablo Ipince fue invitado. ¿Deseas abrir
+                    Spotify para escucharlo ahora?
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Más tarde</button>
+                    <a href="https://open.spotify.com/episode/5mpJPOD9uzuLZ2Mp2k3pAQ?si=OPzf5bJ-S_eTHxoMYxrKOA&nd=1&dlsi=d327079c6e1649a9"
+                        target="_blank" class="btn btn-warning">Abrir Spotify</a>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <div class="container">
-            
-            <a class="navbar-brand me-auto me-lg-0" href="#inicio">
-                <img src="img/new-logo.png" alt="Logo Pablo Ipince" height="40">
-            </a>
-  
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav">
-                    
-                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#estudios">Estudios</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#logros">Logros</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#podcast">Podcast</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#congresos">Congresos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#publicaciones">Publicaciones</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li> 
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
-                </ul>
-           
-             </div>
-        </div>
-    </nav>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">        
+          <a class="navbar-brand me-auto me-lg-0" href="#inicio"><img src="img/new-logo.png" alt="Logo Pablo Ipince" height="40"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#estudios">Estudios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#logros">Logros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#podcast">Podcast</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#congresos">Congresos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#publicaciones">Publicaciones</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#proyectos">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>           
+            </ul>
+        </div>
+    </nav>
 
-    <header id="inicio" class="hero-section banner-con-overlay text-white text-center d-flex align-items-center">
-        <div class="container p-3 h-100"> 
-            <img src="img/10.jpeg" alt="Logo Pablo Ipince" class="img-fluid mb-4" style="max-width: 200px;">
-            <h1 class="display-4 text-white mt-3">Pablo Ipince</h1>
-            <p class="lead text-white" >Crecemos junto a tu negocio</p>
-           
-             <a href="#contacto" class="btn btn-warning btn-lg mt-3">Contáctame Ahora</a>
-        </div>
-    </header>
+        <header id="inicio" class="text-white hero-section text-center">
 
-        <section id="estudios" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">🎓 Estudios y Formación</h2>
-        
-            <div class="row justify-content-center">
-            
-                <div class="col-md-4 mb-4" data-aos="fade-up">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Ingeniero Industrial</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Universidad Andrés Bello | 2010-2014</h6>
-                            <p class="card-text">Profesional con sólida formación en gestión y optimización de procesos, orientado a la eficiencia y mejora continua en organizaciones.</p>
-                        </div>
-                    </div>
-                </div>
-         
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Magister en educación superior </h5>
-            
-                            <h6 class="card-subtitle mb-2 text-muted">Universidad Andrés Bello | 2017-2019</h6>
-                            <p class="card-text">Especialista en innovación pedagógica y formación docente, comprometido con la calidad y excelencia educativa.</p>
-                        </div>
-                    </div>
-                </div>
-            
-                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h5 class="card-title">Doctorado en Educación</h5>
-                            <h6 class="card-subtitle mb-2 text-muted">Universidad de Alacalá| Cursando</h6>
-                            <p class="card-text">Investigador en el ámbito educativo, enfocado en el desarrollo de nuevas estrategias y aportes al avance del conocimiento académico.</p>
-                        </div>
-                    </div>
-                </div>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+            <div class="carousel-inner backgourd-azul">
+                <div class="carousel-item active">
+                    <img src="./img/banner-conferencia.png" class="" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/image-1.png" class="" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="./img/image-2.jpg" class="" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev boton-carousel" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon boton-carousel" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next boton-carousel" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon boton-carousel" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        <div class="container p-3 hero-content">
+            <img src="img/10.jpeg" alt="Logo Pablo Ipince" class="img-fluid mb-4" style="max-width: 200px;">
+            <h1 class="display-4 mt-3">Pablo Ipince</h1>
+            <p class="lead">Crecemos junto a tu negocio</p>
+            <a href="#contacto" class="btn btn-warning btn-lg mt-3">Contáctame Ahora</a>
+        </div>
 
-            </div>
-        
-            <h3 class="text-center mt-5 mb-4 border-bottom pb-2">Certificaciones</h3>
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
-                    <div class="card h-100 shadow-sm border-warning">
-                        <div class="card-body">
-                            <a href="https://www.credly.com/badges/c96d6271-dc47-4989-9317-60fa4074068d/linked_in_profile" target="_blank" class="text-decoration-none">
-                                <h5 class="card-title text-primary"><i class="fas fa-certificate me-2"></i> Certificado participación de contribución académica.</h5>
+    </header>
+
+        <section id="estudios" class="py-5 mt-3">
+            <div class="container ">
+                    <h2 class="text-center mb-5">🎓 Estudios y Formación</h2>
+                    
+                    <div class="row justify-content-center">
+                            
+                            <div class="col-md-4 mb-4" data-aos="fade-up">
+                                    <div class="card h-100 shadow-sm">
+                                            <div class="card-body">
+                                                    <h5 class="card-title">Ingeniero Industrial</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">Universidad Andrés Bello |
+                                2010-2014</h6>
+                                                    <p class="card-text">Profesional con sólida formación en gestión y
+                                optimización de procesos, orientado a la eficiencia y mejora continua en organizaciones.
+                            </p>
+                                                </div>
+                                        </div>
+                                </div>
+                         
+                            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="card h-100 shadow-sm">
+                                            <div class="card-body">
+                                                    <h5 class="card-title">Magister en educación superior </h5>
+                                        
+                                                    <h6 class="card-subtitle mb-2 text-muted">Universidad Andrés Bello |
+                                2017-2019</h6>
+                                                    <p class="card-text">Especialista en innovación pedagógica y
+                                formación docente, comprometido con la calidad y excelencia educativa.</p>
+                                                </div>
+                                        </div>
+                                </div>
+                            
+                            <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="card h-100 shadow-sm">
+                                            <div class="card-body">
+                                                    <h5 class="card-title">Doctorado en Educación</h5>
+                                                    <h6 class="card-subtitle mb-2 text-muted">Universidad de Alacalá|
+                                Cursando</h6>
+                                                    <p class="card-text">Investigador en el ámbito educativo, enfocado
+                                en el desarrollo de nuevas estrategias y aportes al avance del conocimiento académico.
+                            </p>
+                                                </div>
+                                        </div>
+                                </div>
+
+                        </div>
+                    
+                    <h3 class="text-center mt-5 mb-4 border-bottom pb-2">Certificaciones</h3>
+                    <div class="row justify-content-center">
+                            <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+                                    <div class="card h-100 shadow-sm border-warning">
+                                            <div class="card-body">
+                            <a href="https://www.credly.com/badges/c96d6271-dc47-4989-9317-60fa4074068d/linked_in_profile"
+                                target="_blank" class="text-decoration-none">
+                                                        <h5 class="card-title text-primary"><i
+                                        class="fas fa-certificate me-2"></i> Certificado participación de contribución
+                                    académica.</h5>
                             </a>
-                            <h6 class="card-subtitle mb-2 text-muted">Universidad Autónoma de Chile | 2025</h6>
-                            <p class="card-text small">Haga click en el título para visualizar el certificado.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                                    <h6 class="card-subtitle mb-2 text-muted">Universidad Autónoma de
+                                Chile | 2025</h6>
+                                                    <p class="card-text small">Haga click en el título para visualizar
+                                el certificado.</p>
+                                               
+                        </div>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
     </section>
 
-    <section id="logros" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">🏆 Logros y Reconocimientos</h2> 
-            
-            <div class="row justify-content-center">
+        <section id="logros" class="bg-light py-5">
+                <div class="container">
+                        <h2 class="text-center mb-5" data-aos="fade-up">🏆 Logros y Reconocimientos</h2> 
+                       
+                        <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="row">
                         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                             <div class="card h-100 shadow-sm border-primary">
                                 <div class="card-body">
-                                    <h5 class="card-title text-warning"><i class="fas fa-medal me-2"></i> Logro Destacado 1</h5>
+                                    <h5 class="card-title text-warning"><i class="fas fa-medal me-2"></i> Logro
+                                        Destacado 1</h5>
                                     <h6 class="card-subtitle mb-2 text-primary">Título del Proyecto o Hito</h6>
-                                    <p class="card-text small">Descripción concisa del logro, incluyendo el impacto generado y las métricas relevantes.</p>
+                                    <p class="card-text small">Descripción concisa del logro, incluyendo el impacto
+                                        generado y las métricas relevantes.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="150">
                             <div class="card h-100 shadow-sm border-primary">
                                 <div class="card-body">
-                                    <h5 class="card-title text-warning"><i class="fas fa-trophy me-2"></i> Reconocimiento Importante 2</h5>
+                                    <h5 class="card-title text-warning"><i class="fas fa-trophy me-2"></i>
+                                        Reconocimiento Importante 2</h5>
                                     <h6 class="card-subtitle mb-2 text-primary">Nombre del Galardón</h6>
-                                    <p class="card-text small">Detalles sobre el reconocimiento, la entidad que lo otorgó y la fecha.</p>
+                                    <p class="card-text small">Detalles sobre el reconocimiento, la entidad que lo
+                                        otorgó y la fecha.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                             <div class="card h-100 shadow-sm border-primary">
                                 <div class="card-body">
-                                    <h5 class="card-title text-warning"><i class="fas fa-lightbulb me-2"></i> Habilidad Clave 3</h5>
+                                    <h5 class="card-title text-warning"><i class="fas fa-lightbulb me-2"></i> Habilidad
+                                        Clave 3</h5>
                                     <h6 class="card-subtitle mb-2 text-primary">Experiencia Comprobada</h6>
-                                    <p class="card-text small">Ejemplo de cómo la experiencia se traduce en valor para un potencial cliente.</p>
+                                    <p class="card-text small">Ejemplo de cómo la experiencia se traduce en valor para
+                                        un potencial cliente.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-   </section>
+                           
+            </div>
+                    </div>
+           </section>
 
-    <section id="podcast" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5 text-primary" data-aos="fade-up">🎙️ Invitaciones a Podcast</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
-                    
-                    <h3 class="h5 mb-3">Capítulo Invitado en El Profesor Innovador 2025</h3>
-                    
-                    <div class="ratio ratio-16x9" style="--bs-aspect-ratio: 50%;"> 
-                        <iframe 
-                            style="border-radius:12px" 
-                            src="https://open.spotify.com/embed/episode/0123456789abcdef?utm_source=generator&theme=0" 
-                            width="100%" 
-                            height="232" 
-                            frameborder="0" 
-                            allowfullscreen="" 
-                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+        <section id="podcast" class="py-5">
+                <div class="container">
+                        <h2 class="text-center mb-5 text-primary" data-aos="fade-up">🎙️ Invitaciones a Podcast</h2>
+                        <div class="row justify-content-center">
+                                <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+                                        
+                                        <h3 class="h5 mb-3">Capítulo Invitado en El Profesor Innovador 2025</h3>
+                                        
+                                        <div class="ratio ratio-16x9" style="--bs-aspect-ratio: 50%;"> 
+                                                <iframe style="border-radius:12px"
+                            src="https://open.spotify.com/embed/episode/0123456789abcdef?utm_source=generator&theme=0"
+                            width="100%" height="232" frameborder="0" allowfullscreen=""
+                            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                             loading="lazy">
-                        </iframe>
-                    </div>
-                    
-                    <div class="text-center mt-3">
-                       <p class="small text-muted">Escucha mi participación sobre Innovación y Tecnología en la formación técnico profesional.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="congresos" class="bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">🏛️ Congresos y Ponencias</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="50">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h4 class="card-title">Título de la Ponencia en [Nombre del Congreso]</h4>
-                            <p class="text-muted">Lugar | Fecha: 20XX | Participación como [Ponente/Asistente/Moderador]</p>
-                            <p class="card-text">Resumen de la temática abordada y la contribución al evento.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
-                    <div class="card h-100 shadow-sm">
-                        <div class="card-body">
-                            <h4 class="card-title">Participación en [Nombre del Simposio]</h4>
-                            <p class="text-muted">Lugar | Fecha: 20XX | Presentación de [Tipo de trabajo]</p>
-                            <p class="card-text">Detalles sobre el trabajo presentado y las conclusiones principales.</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
-        </div>
-    </section>
-    
-    
-    <section id="publicaciones" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5" data-aos="fade-up">📚 Publicaciones y Reconocimientos</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
+                                                    </iframe>
+                                            </div>
+                                        
+                                        <div class="text-center mt-3">
+                                               <p class="small text-muted">Escucha mi participación sobre Innovación y
+                            Tecnología en la formación técnico profesional.</p>
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </section>
+        <section id="congresos" class="bg-light py-5">
+                <div class="container">
+                        <h2 class="text-center mb-5" data-aos="fade-up">🏛️ Congresos y Ponencias</h2>
+                        <div class="row">
+                                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="50">
+                                        <div class="card h-100 shadow-sm">
+                                                <div class="card-body">
+                                                        <h4 class="card-title">Título de la Ponencia en [Nombre del
+                                Congreso]</h4>
+                                                        <p class="text-muted">Lugar | Fecha: 20XX | Participación como
+                                [Ponente/Asistente/Moderador]</p>
+                                                        <p class="card-text">Resumen de la temática abordada y la
+                                contribución al evento.</p>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                <div class="col-md-6 mb-4" data-aos="fade-up" data-aos-delay="150">
+                                        <div class="card h-100 shadow-sm">
+                                                <div class="card-body">
+                                                        <h4 class="card-title">Participación en [Nombre del Simposio]
+                            </h4>
+                                                        <p class="text-muted">Lugar | Fecha: 20XX | Presentación de
+                                [Tipo de trabajo]</p>
+                                                        <p class="card-text">Detalles sobre el trabajo presentado y las
+                                conclusiones principales.</p>
+                                                    </div>
+                                            </div>
+                                    </div>
+                                </div>
+                    </div>
+            </section>
+
+
+        <section id="publicaciones" class="py-5">
+                <div class="container">
+                        <h2 class="text-center mb-5" data-aos="fade-up">📚 Publicaciones y Reconocimientos</h2>
+                        <div class="row justify-content-center">
+                                <div class="col-lg-10">
                     <h3 class="text-center mb-4 border-bottom pb-2">Capítulos de Libro</h3>
                     <div class="row">
                         <div class="col-md-12 mb-4" data-aos="fade-up" data-aos-delay="50">
                             <div class="card shadow-sm">
                                 <div class="card-body">
                                     <h4 class="card-title text-primary">Capítulos de Libro (Liderazgo docente e IA)</h4>
-                                    <p class="text-muted">Libro | 2025 | <a href="https://drive.google.com/drive/folders/1w6_dw7C6auSWpFATrsMAoFA62Nw8E-Ko" target="_blank">Ver Archivo en Drive</a></p>
-                                    <p class="card-text">Explora cómo la inteligencia artificial puede impulsar el líderazgo docente.</p>
+                                    <p class="text-muted">Libro | 2025 | <a
+                                            href="https://drive.google.com/drive/folders/1w6_dw7C6auSWpFATrsMAoFA62Nw8E-Ko"
+                                            target="_blank">Ver Archivo en Drive</a></p>
+                                    <p class="card-text">Explora cómo la inteligencia artificial puede impulsar el
+                                        líderazgo docente.</p>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-12 mb-4" data-aos="fade-up" data-aos-delay="150">
                             <div class="card shadow-sm">
                                 <div class="card-body">
-                                    <h4 class="card-title text-primary">Capítulos de Libro (Título del Nuevo Capítulo)</h4>
+                                    <h4 class="card-title text-primary">Capítulos de Libro (Título del Nuevo Capítulo)
+                                    </h4>
                                     <p class="text-muted">Libro | Año | <a href="#" target="_blank">Ver Enlace</a></p>
                                     <p class="card-text">Descripción del contenido del nuevo capítulo.</p>
                                 </div>
@@ -244,7 +315,7 @@
                         </div>
                     </div>
 
-                    
+
                     <h3 class="text-center mt-5 mb-4 border-bottom pb-2">Galería de Reconocimientos</h3>
                     <div class="row justify-content-center">
                         <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
@@ -258,7 +329,8 @@
                         </div>
                         <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
                             <div class="card h-100 shadow-sm border-warning">
-                                <img src="img/premio-profesor-innovador.jpeg" class="card-img-top" alt="Premio al Profesor Innovador">
+                                <img src="img/premio-profesor-innovador.jpeg" class="card-img-top"
+                                    alt="Premio al Profesor Innovador">
                                 <div class="card-body text-center">
                                     <h5 class="card-title text-warning">Premios y Reconocimientos obtenidos</h5>
                                     <p class="card-text small text-muted"></p>
@@ -267,20 +339,21 @@
                         </div>
                     </div>
                 </div>
-             </div>
-        </div>
-    </section>
-    
-    
+                             </div>
+                    </div>
+            </section>
+
+
     <section id="proyectos" class="bg-light py-5">
         <div class="container">
             <h2 class="text-center mb-5 text-primary" data-aos="fade-up">🚀 Próximos Proyecto</h2>
-            
+
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="h4 mb-4">AsisProfe PI: Tu Asistente de Innovación Educativa</h3>
-                    <img src="img/asisprofe-logo.png" alt="Logo AsisProfe PI" class="img-fluid mb-4" style="max-width: 250px;">
-                    
+                    <img src="img/asisprofe-logo.png" alt="Logo AsisProfe PI" class="img-fluid mb-4"
+                        style="max-width: 250px;">
+
                     <div class="ratio ratio-16x9">
                         <video controls poster="img/asisprofe-logo.png" class="w-100" style="height: 100%;">
                             <source src="videos/asisprofe-video.mp4" type="video/mp4">
@@ -292,73 +365,80 @@
             </div>
         </div>
     </section>
-    
-    <section id="contacto" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">✉️ Contacto Directo</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <form action="https://formsubmit.co/TU_EMAIL_AQUI@ejemplo.com" method="POST">
-              
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre Completo</label>
-                            <input type="text" class="form-control" id="nombre" name="Nombre" required>
-                        </div>
- 
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="Email" required>
-            
-                         </div>
-                        <div class="mb-3">
-                            <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" name="Mensaje" rows="5" 
-                        required></textarea>
-                        </div>
-                        
-                        <input type="hidden" name="_captcha" value="false">
-                        
- 
-                        <button type="submit" class="btn btn-primary w-100">Enviar Mensaje</button>
-                    </form>
 
-                    <div class="text-center mt-4">
-                        <img src="img/2.jpeg" alt="Icono de Advertencia" class="mb-3 
+        <section id="contacto" class="py-5">
+                <div class="container">
+                        <h2 class="text-center mb-5">✉️ Contacto Directo</h2>
+                        <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                        <form action="https://formsubmit.co/TU_EMAIL_AQUI@ejemplo.com" method="POST">
+                                      
+                                                <div class="mb-3">
+                                                        <label for="nombre" class="form-label">Nombre Completo</label>
+                                                        <input type="text" class="form-control" id="nombre"
+                                name="Nombre" required>
+                                                    </div>
+                         
+                                                <div class="mb-3">
+                                                        <label for="email" class="form-label">Correo Electrónico</label>
+                                                        <input type="email" class="form-control" id="email" name="Email"
+                                required>
+                                        
+                                                     </div>
+                                                <div class="mb-3">
+                                                        <label for="mensaje" class="form-label">Mensaje</label>
+                                                        <textarea class="form-control" id="mensaje" name="Mensaje"
+                                rows="5"                           required></textarea>
+                                                    </div>
+                                                
+                                                <input type="hidden" name="_captcha" value="false">
+                                                
+                         
+                                                <button type="submit" class="btn btn-primary w-100">Enviar
+                            Mensaje</button>
+                                            </form>
+
+                                        <div class="text-center mt-4">
+                                                <img src="img/2.jpeg" alt="Icono de Advertencia" class="mb-3 
                         img-section" style="width: 80px;">
-                        <p class="text-muted">Responderemos a la brevedad posible.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                                                <p class="text-muted">Responderemos a la brevedad posible.</p>
+                                            </div>
+                                    </div>
+                            </div>
+                    </div>
+            </section>
 
-    <footer class="bg-dark text-white text-center py-3">
- 
-        <div class="container">
-            <p class="mb-0">©
-                <span id="year"></span> Pablo Ipince. Todos los derechos reservados.</p>
-            <p class="mb-0"><small>Diseñado con Bootstrap</small></p>
-        </div>
-    </footer>
+        
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    
+       
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+       
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        var spotifyModal = new bootstrap.Modal(document.getElementById('spotifyModal'));
-        spotifyModal.show();
-      });
+        document.addEventListener('DOMContentLoaded', function () {
+            var spotifyModal = new bootstrap.Modal(document.getElementById('spotifyModal'));
+            spotifyModal.show();
+        });
     </script>
-    
-    <script>
-        AOS.init();
-    </script>
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
+
+       
+    <script>
+        AOS.init();
+    </script>
+       
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <footer class="bg-dark text-white text-center ">
+                <div class="">
+                        <p class="mb-0">©
+                                <span id="year"></span> Pablo Ipince. Todos los derechos reservados.</p>
+                        <p class="mb-0"><small>Diseñado con Bootstrap</small></p>
+                    </div>
+            </footer>
 </body>
+
 </html>
-
-
-
