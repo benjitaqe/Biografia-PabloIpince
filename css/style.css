@@ -1,8 +1,13 @@
 :root {
+
     --primary-color: #191970; 
+
     --secondary-color: #E68A00; 
+
     --light-color: #f8f9fa;
+
     --dark-color: #212529;
+
 }
 .navbar{
     height: 8vh;
@@ -17,55 +22,97 @@
 
 
 .img-section{
+
     border-radius: 100%;
+
 }
 
-.navbar-dark.bg-primary {
-    background-color: var(--primary-color) !important;
-}
+
+
+
 
 .navbar-brand {
+
     font-weight: bold;
+
     display: flex;
+
     align-items: center;
+
 }
+
+
+
 
 
 .btn-warning {
+
     background-color: var(--secondary-color);
+
     border-color: var(--secondary-color);
+
     color: white;
+
 }
+
+
 
 .btn-warning:hover {
+
     background-color: #CC7A00; 
+
     border-color: #CC7A00;
+
 }
+
+
 
 section {
+
     padding: 60px 0;
+
 }
 
+
+
 footer.bg-dark {
+
     background-color: var(--dark-color) !important;
     margin-top: auto !important;
 }
 
+
+
 .card-title.text-primary {
+
     color: var(--primary-color) !important;
+
 }
+
+
 
 .card-title.text-warning i {
+
     color: var(--secondary-color) !important;
+
 }
 
+
+
 .card.border-primary {
+
     border-color: var(--primary-color) !important;
+
     border-width: 3px !important; 
+
 }
+
 .card.border-warning {
+
     border-color: var(--secondary-color) !important;
+
     border-width: 3px !important; 
+
 }
 
 .hero-section {
