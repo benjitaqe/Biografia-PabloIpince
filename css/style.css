@@ -169,3 +169,55 @@ footer.bg-dark {
 footer{
   height: 100%;
 }
+
+
+#quien-es .img-circular {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border: 4px solid var(--primary-color);
+    border-radius: 50%;
+    margin: 0 auto; 
+}
+
+#quien-es .habilidades-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 800px; 
+    margin: 40px auto;
+}
+
+#quien-es .habilidades-lateral {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end; 
+}
+
+#quien-es .habilidades-lateral.derecha {
+    align-items: flex-start; 
+}
+
+#quien-es .badge-habilidad {
+    background-color: var(--primary-color) !important;
+    padding: 8px 12px;
+    margin: 10px 0;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+    #quien-es .habilidades-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    #quien-es .habilidades-lateral {
+        width: 100%;
+        align-items: center;
+        margin-top: 20px;
+    }
+    #quien-es .habilidades-lateral.derecha {
+        align-items: center;
+    }
+}
