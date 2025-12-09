@@ -13,17 +13,25 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-        .whatsapp-float {
+        .navbar {
+            transition: background-color 0.4s ease-in-out, padding 0.4s ease;
+            background-color: transparent !important;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        .navbar.scrolled {
+            background-color: #0d6efd !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        .floating-btn {
             position: fixed;
             width: 60px;
             height: 60px;
-            bottom: 40px;
-            right: 40px;
-            background-color: #25d366;
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 35px;
+            right: 40px; 
+            border-radius: 50%;
             box-shadow: 2px 2px 3px #999;
             z-index: 1000;
             display: flex;
@@ -33,18 +41,105 @@
             transition: all 0.3s ease;
         }
 
+        .whatsapp-float {
+            bottom: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            font-size: 35px;
+        }
+
         .whatsapp-float:hover {
             background-color: #128C7E;
             color: #FFF;
             transform: scale(1.1);
+        }
+
+        .logo-float {
+            bottom: 120px; 
+            background-color: #fff;
+            border: 2px solid #004085;
+            overflow: hidden;
+        }
+
+        .logo-float img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-float:hover {
+            transform: scale(1.1);
+            box-shadow: 2px 2px 10px #666;
+        }
+        .contact-card {
+            background-color: #1a2533; 
+            color: white;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .image-side {
+            background-image: url('img/pablo7.jpeg');
+            background-size: cover;
+            background-position: center top;
+            min-height: 500px;
+            border-radius: 15px 0 0 15px;
+        }
+        .form-dark .form-control, 
+        .form-dark .form-select {
+            background-color: #2c3e50;
+            border: 1px solid #455a64;
+            color: #fff;
+        }
+
+        .form-dark .form-control:focus, 
+        .form-dark .form-select:focus {
+            background-color: #34495e;
+            color: #fff;
+            border-color: #0d6efd;
+            box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+        }
+
+        .form-dark label {
+            color: #ccc;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+
+        #mensaje-exito {
+            display: none;
+            padding: 20px;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 991px) {
+            .contact-card { border-radius: 0 0 15px 15px; }
+            .image-side { border-radius: 15px 15px 0 0; min-height: 300px; }
+            
+            .navbar-collapse {
+                background-color: #0d6efd; 
+                padding: 1rem;
+                border-radius: 0 0 10px 10px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .floating-btn { width: 50px; height: 50px; right: 20px; }
+            .whatsapp-float { bottom: 20px; font-size: 28px; }
+            .logo-float { bottom: 85px; }
         }
     </style>
 </head>
 
 <body class="d-flex flex-column min-vh-100">
 
-    <a href="https://wa.me/56983806294" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/56983806294" class="floating-btn whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="#contacto" class="floating-btn logo-float" title="Ir a Contacto">
+        <img src="img/10.jpeg" alt="Logo Pablo Ipince">
     </a>
 
     <div class="modal fade" id="spotifyModal" tabindex="-1" aria-labelledby="spotifyModalLabel" aria-hidden="true">
@@ -66,42 +161,29 @@
             </div>
         </div>
     </div>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand me-auto me-lg-0" href="#inicio"><img src="img/new-logo.png" alt="Logo Pablo Ipince"
-                height="40"></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#inicio">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#estudios">Estudios</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#podcast">Podcast</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#publicaciones">Publicaciones</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#congresos">Congresos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#proyectos">Proyectos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contacto">Contacto</a>
-                </li>
-            </ul>
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand me-auto me-lg-0" href="#inicio"><img src="img/new-logo.png" alt="Logo Pablo Ipince" height="40"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#estudios">Estudios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#podcast">Podcast</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#publicaciones">Publicaciones</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#congresos">Congresos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
     <header id="inicio" class="text-white hero-section text-center">
-
         <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel"
             data-bs-interval="3000">
             <div class="carousel-inner backgourd-azul">
@@ -123,11 +205,9 @@
             </div>
         </div>
         <div class="container p-3 hero-content">
-            <img src="img/10.jpeg" alt="Logo Pablo Ipince" class="img-fluid mb-4" style="max-width: 200px;">
             <h1 class="display-4 mt-3">Pablo Ipince</h1>
             <p class="lead">Crecemos junto a tu negocio</p>
         </div>
-
     </header>
 
     <section id="quien-es" class="py-5">
@@ -141,23 +221,19 @@
             <div class="row justify-content-center">
                 <div class="col-lg-10">
                     <div class="habilidades-container">
-
                         <div class="habilidades-lateral" data-aos="fade-right">
                             <span class="badge badge-habilidad" data-aos-delay="100">Optimización de Procesos</span>
                             <span class="badge badge-habilidad" data-aos-delay="200">SAP / AnyLogistix</span>
                             <span class="badge badge-habilidad" data-aos-delay="300">Diseño Curricular</span>
                         </div>
-
                         <div class="text-center" data-aos="fade-up" data-aos-delay="400">
                             <img src="img/pablo4.jpeg" alt="Pablo Ipince en conferencia" class="img-circular shadow-lg">
                         </div>
-
                         <div class="habilidades-lateral derecha" data-aos="fade-left">
                             <span class="badge badge-habilidad" data-aos-delay="500">Logística Avanzada (Drivin)</span>
                             <span class="badge badge-habilidad" data-aos-delay="600">Liderazgo Docente</span>
                             <span class="badge badge-habilidad" data-aos-delay="700">IA y Python</span>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -167,11 +243,10 @@
                     <p class="lead text-center">
                         Pablo Ipince Gómez es Ingeniero Industrial con Magíster en Docencia para la Educación Superior y
                         Doctorando en Educación. Su trayectoria profesional se centra en la aplicación de metodologías
-                        activas y la mejora continua de procesos organizacionales en Logística, complementado con
+                        activas y la mejora continua de procesos organizacionales en Logística, complementada con
                         experiencia en el diseño curricular y el uso de tecnologías avanzadas como SAP, AnyLogistix y
                         Python para la gestión empresarial e investigación.
                     </p>
-
                     <div class="text-center mt-4">
                         <a href="pabloipince.pdf" target="_blank" class="btn btn-warning btn-lg"><i
                                 class="fas fa-download me-2"></i> Descargar CV Completo</a>
@@ -180,6 +255,7 @@
             </div>
         </div>
     </section>
+
     <section id="estudios" class="py-5 mt-3">
         <div class="container ">
             <h2 class="text-center mb-5"> Estudios y Formación</h2>
@@ -191,14 +267,11 @@
                                 <h5 class="card-title">Ingeniero Industrial</h5>
                             </div>
                             <div class="text-box-orange">
-                                <h6 class="card-subtitle mb-2 text-muted">Universidad Andrés Bello |
-                                    2010-2014</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Universidad Andrés Bello | 2010-2014</h6>
                             </div>
                             <div class="text-box-orange">
-                                <p class="card-text">Profesional con sólida formación en gestión y
-                                    optimización de procesos, orientado a la eficiencia y mejora continua en
-                                    organizaciones.
-                                </p>
+                                <p class="card-text">Profesional con sólida formación en gestión y optimización de
+                                    procesos, orientado a la eficiencia y mejora continua en organizaciones.</p>
                             </div>
                         </div>
                     </div>
@@ -207,15 +280,14 @@
                     <div class="card h-100 shadow-sm">
                         <div class="card-body">
                             <div class="text-box-orange">
-                                <h5 class="card-title">Magister en Docencia para la Educación Superior</h5>
+                                <h5 class="card-title">Magíster en Docencia para la Educación Superior</h5>
                             </div>
                             <div class="text-box-orange">
-                                <h6 class="card-subtitle mb-2 text-muted">Universidad Andrés Bello |
-                                    2017-2019</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Universidad Andrés Bello | 2017-2019</h6>
                             </div>
                             <div class="text-box-orange">
-                                <p class="card-text">Especialista en innovación pedagógica y
-                                    formación docente, comprometido con la calidad y excelencia educativa.</p>
+                                <p class="card-text">Especialista en innovación pedagógica y formación docente,
+                                    comprometido con la calidad y excelencia educativa.</p>
                             </div>
                         </div>
                     </div>
@@ -229,14 +301,11 @@
                                 <h5 class="card-title">Doctorado en Educación</h5>
                             </div>
                             <div class="text-box-orange">
-                                <h6 class="card-subtitle mb-2 text-muted">Universidad de Alcalá |
-                                    Cursando</h6>
+                                <h6 class="card-subtitle mb-2 text-muted">Universidad de Alcalá | Cursando</h6>
                             </div>
                             <div class="text-box-orange">
-                                <p class="card-text">Investigador en el ámbito educativo, enfocado
-                                    en el desarrollo de nuevas estrategias y aportes al avance del conocimiento
-                                    académico.
-                                </p>
+                                <p class="card-text">Investigador en el ámbito educativo, enfocado en el desarrollo de
+                                    nuevas estrategias y aportes al avance del conocimiento académico.</p>
                             </div>
                         </div>
                     </div>
@@ -244,6 +313,7 @@
             </div>
         </div>
     </section>
+
     <section id="podcast" class="py-5">
         <div class="container">
             <h2 class="text-center mb-5 text-primary" data-aos="fade-up"> Invitaciones a Podcast</h2>
@@ -257,14 +327,13 @@
                         loading="lazy">
                     </iframe>
                     <div class="text-center mt-3">
-                        <p class="small text-muted">Escucha mi participación sobre Innovación y
-                            Tecnología en la formación técnico profesional.</p>
+                        <p class="small text-muted">Escucha mi participación sobre Innovación y Tecnología en la
+                            formación técnico profesional.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <section id="publicaciones" class="py-5">
         <div class="container">
@@ -301,7 +370,6 @@
                         </div>
                     </div>
 
-
                     <h3 class="text-center mt-5 mb-4 border-bottom pb-2">Galería de Reconocimientos</h3>
                     <div class="row justify-content-center">
                         <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="200">
@@ -313,7 +381,6 @@
                                 </div>
                             </div>
                         </div>
-                        
                         <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="300">
                             <div class="card h-100 shadow-sm border-warning">
                                 <img src="img/espirituinacap.jpeg" class="card-img-top" alt="Premio Espíritu Inacap">
@@ -323,17 +390,16 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="col-md-6 col-lg-4 mb-4" data-aos="zoom-in" data-aos-delay="400">
                             <div class="card h-100 shadow-sm border-warning">
-                                <img src="img/encuentroeducativo.jpeg" class="card-img-top" alt="Premio Encuentro Educativo">
+                                <img src="img/encuentroeducativo.jpeg" class="card-img-top"
+                                    alt="Premio Encuentro Educativo">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title text-warning">Ganador y representante de la Sede Maipú en Encuentro Educativo 2023</h5>
-                                    <p class="card-text small text-muted">Proyecto: “Salida a terreno en el aula” | INACAP MAIPÚ</p>
+                                    <h5 class="card-title text-warning">Ganador de Espíritu Educativo 2023</h5>
+                                    <p class="card-text small text-muted">INACAP Maipú | Encuentro Educativo</p>
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -345,7 +411,6 @@
             <h2 class="text-center mb-5 text-primary" data-aos="fade-up">Participación en Congresos</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-10">
-
                     <div class="card shadow-sm mb-4 border-0 border-start border-primary border-4" data-aos="fade-up">
                         <div class="card-body p-4">
                             <div class="row align-items-center">
@@ -358,12 +423,11 @@
                                     <h6 class="card-subtitle mb-2 text-muted">Universidad Nacional Andrés Bello</h6>
                                     <p class="card-text mb-0"><i
                                             class="fas fa-microphone me-2 text-warning"></i><strong>Participación:</strong>
-                                        Conferencista y Ponencista.</p>
+                                        Conferencista y Ponente.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="card shadow-sm mb-4 border-0 border-start border-primary border-4" data-aos="fade-up"
                         data-aos-delay="100">
                         <div class="card-body p-4">
@@ -377,12 +441,11 @@
                                     <h6 class="card-subtitle mb-2 text-muted">Universidad Autónoma de Chile</h6>
                                     <p class="card-text mb-0"><i
                                             class="fas fa-microphone me-2 text-warning"></i><strong>Participación:</strong>
-                                        Ponencista.</p>
+                                        Ponente.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                     <div class="card shadow-sm mb-4 border-0 border-start border-primary border-4" data-aos="fade-up"
                         data-aos-delay="200">
                         <div class="card-body p-4">
@@ -397,12 +460,11 @@
                                     </h6>
                                     <p class="card-text mb-0"><i
                                             class="fas fa-users-cog me-2 text-warning"></i><strong>Participación:</strong>
-                                        Monitor de mesa de comunicaciones y Ponencista.</p>
+                                        Monitor de mesa de comunicaciones y Ponente.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -415,31 +477,43 @@
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center" data-aos="fade-up">
                     <h3 class="h4 mb-4">Proyecto 2025: Simuladores Logísticos para INACAP a Nivel Nacional</h3>
-                    
                     <div class="ratio ratio-16x9 mb-4">
                         <video controls poster="img/pablocarru.jpeg" class="w-100" style="height: 100%;">
                             <source src="videos/videopablo.mp4" type="video/mp4">
                             Tu navegador no soporta la etiqueta de video HTML5.
                         </video>
                     </div>
-
-                    <div class="text-start p-4 bg-white shadow-sm rounded">
-                        <p class="lead">
-                            Pablo Ipince, en colaboración con INACAP y con el respaldo del Director Nacional del Área Logística, lideró el desarrollo e implementación del proyecto de Simuladores Logísticos a nivel nacional, una iniciativa innovadora que transforma la manera de enseñar y aprender en la logística moderna.
-                        </p>
-                        <p>
-                            Este proyecto incorpora tecnologías avanzadas y escenarios reales de operación, permitiendo a los estudiantes fortalecer sus competencias mediante experiencias prácticas, interactivas y alineadas a las necesidades actuales de la industria.
-                        </p>
+                    <p class="small text-muted mt-3">Vídeo de Demostración</p>
+                    
+                    <div>
+                        <button class="btn btn-warning" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#infoProyecto2024" aria-expanded="false" aria-controls="infoProyecto2024">
+                            Información del Proyecto <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                        <div class="collapse mt-3" id="infoProyecto2024">
+                            <div class="card card-body text-start bg-white shadow-sm">
+                                <p class="lead">
+                                    Pablo Ipince, en colaboración con INACAP y con el respaldo del Director Nacional del
+                                    Área Logística, lideró el desarrollo e implementación del proyecto de Simuladores
+                                    Logísticos a nivel nacional, una iniciativa innovadora que transforma la manera de
+                                    enseñar y aprender en la logística moderna.
+                                </p>
+                                <p class="mb-0">
+                                    Este proyecto incorpora tecnologías avanzadas y escenarios reales de operación,
+                                    permitiendo a los estudiantes fortalecer sus competencias mediante experiencias
+                                    prácticas, interactivas y alineadas a las necesidades actuales de la industria.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center" data-aos="fade-up" data-aos-delay="100">
-                    <h3 class="h4 mb-4">AsisProfe PI: Tu Asistente de Innovación Educativa</h3>
+                    <h3 class="h4 mb-4">Proyecto 2026</h3>
                     <img src="img/asisprofe-logo.png" alt="Logo AsisProfe PI" class="img-fluid mb-4"
                         style="max-width: 250px;">
-
                     <div class="ratio ratio-16x9">
                         <video controls poster="img/asisprofe-logo.png" class="w-100" style="height: 100%;">
                             <source src="videos/asisprofe-video.mp4" type="video/mp4">
@@ -447,36 +521,103 @@
                         </video>
                     </div>
                     <p class="small text-muted mt-3">Vídeo de Demostración</p>
+                    <div class="mt-4">
+                        <button class="btn btn-warning" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#infoProyecto2026" aria-expanded="false" aria-controls="infoProyecto2026">
+                            Información del Proyecto <i class="fas fa-chevron-down ms-2"></i>
+                        </button>
+                        <div class="collapse mt-3" id="infoProyecto2026">
+                            <div class="card card-body text-start bg-white shadow-sm">
+                                <p>AsisProfe PI es un asistente diseñado para apoyar directamente a los docentes en sus
+                                    clases. Se activa mediante voz y permite interactuar de manera natural: el profesor
+                                    puede hablarle y pedirle que cree una actividad, que defina un concepto o que
+                                    entregue apoyo inmediato durante la enseñanza.</p>
+                                <p>Este robot busca convertirse en un aliado pedagógico dentro del aula, ofreciendo
+                                    respuestas rápidas y recursos adaptados a las necesidades de cada momento. Su
+                                    propósito es facilitar la labor docente y enriquecer la experiencia de aprendizaje
+                                    de los estudiantes.</p>
+                                <p>En su trayectoria, Pablo destaca la enseñanza de programación recibida del profesor
+                                    Felipe Reyes, quien aportó conocimientos fundamentales que hoy se reflejan en la
+                                    creación de recursos digitales y soluciones prácticas para la educación.</p>
+                                <p><strong>La versión 2.0 de AsisProfe PI incorporará funciones avanzadas que marcarán
+                                        un salto en la innovación educativa. Entre ellas se incluyen:</strong></p>
+                                <ul>
+                                    <li>La capacidad de grabar las clases y enviar un resumen en formato de audio
+                                        directamente al correo de los alumnos.</li>
+                                    <li>Una cámara integrada que permitirá detectar la cantidad de estudiantes
+                                        presentes, registrar asistencia automáticamente y seleccionar personas al azar
+                                        para fomentar la participación.</li>
+                                </ul>
+                                <p class="mb-0">Con estas mejoras, AsisProfe PI 2.0 se proyecta como un asistente
+                                    integral que combina tecnología, interacción y análisis para transformar la dinámica
+                                    de las clases y apoyar a los docentes en su misión de enseñar con calidad e
+                                    innovación.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contacto" class="py-5">
+    <section id="contacto" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-5"> Contacto Directo</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <form action="https://formsubmit.co/TU_EMAIL_AQUI@ejemplo.com" method="POST">
-                        <div class="mb-3">
-                            <label for="nombre" class="form-label">Nombre Completo</label>
-                            <input type="text" class="form-control" id="nombre" name="Nombre" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Correo Electrónico</label>
-                            <input type="email" class="form-control" id="email" name="Email" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="mensaje" class="form-label">Mensaje</label>
-                            <textarea class="form-control" id="mensaje" name="Mensaje" rows="5" required></textarea>
-                        </div>
-                        <input type="hidden" name="_captcha" value="false">
-                        <button type="submit" class="btn btn-primary w-100">Enviar
-                            Mensaje</button>
-                    </form>
-                    <div class="text-center mt-4">
-                        <img src="img/2.jpeg" alt="Icono de Advertencia" class="mb-3img-section" style="width: 80px;">
-                        <p class="text-muted">Responderemos a la brevedad posible.</p>
+            <div class="row align-items-stretch g-0 rounded-4 overflow-hidden shadow-lg">
+                <div class="col-lg-5 d-none d-lg-block position-relative image-side">
+                    </div>
+
+                <div class="col-lg-7 p-5 contact-card form-dark">
+                    <h2 class="mb-4 fw-bold">Agenda tu Consulta</h2>
+                    <p class="mb-4 text-light opacity-75">Contáctanos para potenciar tu proyecto educativo o empresarial.</p>
+
+                    <div id="form-container">
+                        <form action="https://formsubmit.co/ajax/pabloipinceasesorias@gmail.com" method="POST" id="contact-form">
+                            <input type="hidden" name="_subject" value="Nuevo mensaje desde tu Web!">
+                            <input type="hidden" name="_captcha" value="false">
+
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label for="nombre" class="form-label">Nombre</label>
+                                    <input type="text" class="form-control" id="nombre" name="Nombre" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Correo</label>
+                                    <input type="email" class="form-control" id="email" name="Email" required>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <label for="telefono" class="form-label">Teléfono</label>
+                                    <input type="tel" class="form-control" id="telefono" name="Telefono" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="servicio" class="form-label">Servicio</label>
+                                    <select class="form-select" id="servicio" name="Servicio" required>
+                                        <option value="" selected disabled>Selecciona una opción...</option>
+                                        <option value="Docencia y Capacitación">Docencia y Capacitación</option>
+                                        <option value="Asesoría Logística">Asesoría Logística</option>
+                                        <option value="Implementación SAP/Simuladores">Implementación Tecnológica (SAP/Simuladores)</option>
+                                        <option value="Diseño Curricular">Diseño Curricular</option>
+                                        <option value="Asesoría Digital">Asesoría Digital</option>
+                                        <option value="Otro">Otro</option>
+                                    </select>
+                                </div>
+
+                                <div class="col-12">
+                                    <label for="mensaje" class="form-label">Mensaje</label>
+                                    <textarea class="form-control" id="mensaje" name="Mensaje" rows="4" required></textarea>
+                                </div>
+
+                                <div class="col-12 mt-4">
+                                    <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">Enviar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div id="mensaje-exito" class="text-center mt-3">
+                        <i class="fas fa-check-circle fa-2x text-success mb-2"></i>
+                        <h5 class="text-success">¡Mensaje Enviado!</h5>
+                        <p class="mb-0 text-light">Gracias por escribirnos. Te responderemos a la brevedad.</p>
                     </div>
                 </div>
             </div>
@@ -502,18 +643,65 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
     </script>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita recarga
+
+            const form = event.target;
+            const formData = new FormData(form);
+            const submitBtn = form.querySelector('button[type="submit"]');
+            
+            submitBtn.innerHTML = 'Enviando...';
+            submitBtn.disabled = true;
+
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    document.getElementById('contact-form').style.display = 'none';
+                    document.getElementById('mensaje-exito').style.display = 'block';
+                } else {
+                    alert('Hubo un error al enviar el mensaje. Por favor intenta nuevamente.');
+                    submitBtn.innerHTML = 'Enviar';
+                    submitBtn.disabled = false;
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Hubo un error de conexión. Por favor intenta nuevamente.');
+                submitBtn.innerHTML = 'Enviar';
+                submitBtn.disabled = false;
+            });
+        });
+    </script>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
     
     <footer class="bg-dark text-white text-center py-4">
         <div class="container">
             <div class="mb-3">
-                <a href="https://www.linkedin.com/in/pabloipince?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="text-white text-decoration-none mx-3">
+                <a href="https://www.linkedin.com/in/pabloipince?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+                    target="_blank" class="text-white text-decoration-none mx-3">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
-                <a href="https://www.instagram.com/pabloipinceasesorias?igsh=ZmphaHA5M3hwZnkw&utm_source=qr" target="_blank" class="text-white text-decoration-none mx-3">
+                <a href="https://www.instagram.com/pabloipinceasesorias?igsh=ZmphaHA5M3hwZnkw&utm_source=qr"
+                    target="_blank" class="text-white text-decoration-none mx-3">
                     <i class="fab fa-instagram fa-2x"></i>
                 </a>
             </div>
-
             <p class="mb-0">© <span id="year"></span> Pablo Ipince. Todos los derechos reservados.</p>
             <p class="mb-0"><small>Diseñado con Bootstrap</small></p>
         </div>
@@ -521,4 +709,3 @@
 </body>
 
 </html>
-
